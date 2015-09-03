@@ -11,7 +11,8 @@ function draw() {
   stroke(hue, 50, 70);
   fill(hue, 90, 50, 50);
 
-  ellipse(randomize(mouseX), randomize(mouseY), 40, 40);
+  var ballSize = random(20, 40);
+  ellipse(randomize(mouseX), randomize(mouseY), ballSize, ballSize);
 }
 
 function randomize(coordinate) {
