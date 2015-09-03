@@ -4,12 +4,23 @@ function setup() {
 
   createCanvas(800, 400);
   background(50, 2, 100);
+
+  noLoop();
 }
 
 function draw() {
+}
+
+/***
+ * Events
+ */
+function mouseMoved() {
   drawRandomEllipse();
 }
 
+/***
+ * Libraries
+ */
 function drawRandomEllipse() {
   var hue = random(0, 100);
   var saturation = random(0, 20);
