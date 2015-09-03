@@ -7,7 +7,8 @@ function setup() {
 }
 
 function draw() {
-  stroke(100, 100, 100);
-  fill(80, 90, 100, 30)
+  var hue = random(0, 100);
+  stroke(hue, 50, 70);
+  fill(hue, 90, 50, 50);
   ellipse(mouseX, mouseY, 10, 10);
 }
