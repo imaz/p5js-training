@@ -8,8 +8,9 @@ function setup() {
 
 function draw() {
   var hue = random(0, 100);
-  stroke(hue, 10, 90, 70);
-  fill(hue, 10, 100, 50);
+  var saturation = random(0, 20);
+  stroke(hue, saturation, 90, 70);
+  fill(hue, saturation, 100, 50);
 
   var ballSize = random(20, 40);
   ellipse(randomize(mouseX), randomize(mouseY), ballSize, ballSize);
