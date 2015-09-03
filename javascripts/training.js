@@ -3,13 +3,13 @@ function setup() {
   colorMode(HSB, 100);
 
   createCanvas(800, 400);
-  background(0, 0, 0);
+  background(50, 2, 100);
 }
 
 function draw() {
   var hue = random(0, 100);
-  stroke(hue, 50, 70);
-  fill(hue, 90, 50, 50);
+  stroke(hue, 10, 90, 70);
+  fill(hue, 10, 100, 50);
 
   var ballSize = random(20, 40);
   ellipse(randomize(mouseX), randomize(mouseY), ballSize, ballSize);
