@@ -15,13 +15,13 @@ function draw() {
  * Events
  */
 function mouseMoved() {
-  drawRandomEllipse();
+  drawPolkaDots();
 }
 
 /***
  * Libraries
  */
-function drawRandomEllipse() {
+function drawPolkaDots() {
   var hue = random(0, 100);
   var saturation = random(0, 20);
   stroke(hue, saturation, 90, 70);
