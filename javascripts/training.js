@@ -12,16 +12,7 @@ function setup() {
 }
 
 function draw() {
-  noStroke();
-  fill(50, 60, 90, 10);
-  var lineWeight = 10;
-  var radius = 150;
-  var angle = frameCount;
-  ellipse(
-    cos(angle) * radius + width/2,
-    sin(angle) * radius + height/2,
-    lineWeight, lineWeight
-  );
+  circle.draw();
 }
 
 /***
@@ -34,6 +25,26 @@ function mouseMoved() {
 /***
  * Libraries
  */
+function Circle() {
+  this.draw = function() {
+    noStroke();
+    fill(50, 60, 90, 10);
+    var lineWeight = 10;
+    ellipse(getX(), getY(), lineWeight, lineWeight);
+  }
+
+  var radius = 150;
+  var angle = function(){ return frameCount };
+
+  var getX = function() {
+    return cos(angle()) * radius + width/2
+  };
+  var getY = function() {
+    return sin(angle()) * radius + height/2
+  };
+};
+var circle = new Circle();
+
 function drawPolkaDots(x, y) {
   x = x || mouseX;
   y = y || mouseY;
