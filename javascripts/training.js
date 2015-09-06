@@ -8,7 +8,7 @@ function setup() {
   textSize(30);
 
   createCanvas(800, 400);
-  background(50, 12, 100);
+  background(50, 0, 100);
 }
 
 function draw() {
