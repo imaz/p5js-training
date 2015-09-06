@@ -2,24 +2,24 @@ function setup() {
   // 色相, 彩度, 明度, 透明度 で指定できる
   colorMode(HSB, 100);
 
+  frameRate(30);
+  textSize(30);
+
   createCanvas(800, 400);
   background(50, 12, 100);
-
-  noLoop();
 }
 
 function draw() {
   noStroke();
-  fill(50, 60, 90, 5);
+  fill(50, 60, 90, 100);
   var lineWeight = 10;
   var radius = 150;
-  for(var i = 0; i < 360; i++){
-    ellipse(
-      cos(i) * radius + width/2,
-      sin(i) * radius + height/2,
-      lineWeight, lineWeight
-    );
-  }
+  var angle = frameCount;
+  ellipse(
+    cos(angle) * radius + width/2,
+    sin(angle) * radius + height/2,
+    lineWeight, lineWeight
+  );
 }
 
 /***
