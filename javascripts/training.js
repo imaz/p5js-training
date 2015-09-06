@@ -12,6 +12,7 @@ function setup() {
 }
 
 function draw() {
+  circle.drawPolkaDots();
   circle.draw();
 }
 
@@ -28,9 +29,12 @@ function mouseMoved() {
 function Circle() {
   this.draw = function() {
     noStroke();
-    fill(50, 60, 90, 10);
+    fill(50, 60, 90, 100);
     var lineWeight = 10;
     ellipse(getX(), getY(), lineWeight, lineWeight);
+  };
+  this.drawPolkaDots = function() {
+    drawPolkaDots(getX(), getY());
   }
 
   var radius = 150;
