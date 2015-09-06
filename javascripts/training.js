@@ -34,14 +34,16 @@ function mouseMoved() {
 /***
  * Libraries
  */
-function drawPolkaDots() {
+function drawPolkaDots(x, y) {
+  x = x || mouseX;
+  y = y || mouseY;
   var hue = random(0, 100);
   var saturation = random(0, 50);
   stroke(hue, saturation, 90, 70);
   fill(hue, saturation, 100, 50);
 
   var ballSize = random(20, 40);
-  ellipse(randomize(mouseX), randomize(mouseY), ballSize, ballSize);
+  ellipse(randomize(x), randomize(y), ballSize, ballSize);
 }
 
 function randomize(coordinate) {
