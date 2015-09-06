@@ -20,7 +20,7 @@ function draw() {
  * Events
  */
 function mouseMoved() {
-  drawPolkaDots();
+  polkaDots.draw();
 }
 
 /***
@@ -34,7 +34,7 @@ function Circle() {
     ellipse(getX(), getY(), lineWeight, lineWeight);
   };
   this.drawPolkaDots = function() {
-    drawPolkaDots(getX(), getY());
+    polkaDots.draw(getX(), getY());
   }
 
   var radius = 150;
@@ -49,17 +49,22 @@ function Circle() {
 };
 var circle = new Circle();
 
-function drawPolkaDots(x, y) {
-  x = x || mouseX;
-  y = y || mouseY;
-  var hue = random(0, 100);
-  var saturation = random(0, 50);
-  stroke(hue, saturation, 90, 70);
-  fill(hue, saturation, 100, 50);
+function PolkaDots() {
+  this.draw = function(x, y) {
+    x = x || mouseX;
+    y = y || mouseY;
 
-  var ballSize = random(20, 40);
-  ellipse(randomize(x), randomize(y), ballSize, ballSize);
+    var hue = random(0, 100);
+    var saturation = random(0, 50);
+
+    stroke(hue, saturation, 90, 70);
+    fill(hue, saturation, 100, 50);
+
+    var ballSize = random(20, 40);
+    ellipse(randomize(x), randomize(y), ballSize, ballSize);
+  }
 }
+var polkaDots = new PolkaDots();
 
 function randomize(coordinate) {
   return coordinate + random(-30, 30);
