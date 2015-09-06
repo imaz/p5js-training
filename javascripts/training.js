@@ -3,7 +3,7 @@ function setup() {
   colorMode(HSB, 100);
 
   createCanvas(800, 400);
-  background(50, 2, 100);
+  background(50, 12, 100);
 
   noLoop();
 }
@@ -23,7 +23,7 @@ function mouseMoved() {
  */
 function drawPolkaDots() {
   var hue = random(0, 100);
-  var saturation = random(0, 20);
+  var saturation = random(0, 50);
   stroke(hue, saturation, 90, 70);
   fill(hue, saturation, 100, 50);
 
