@@ -1,8 +1,10 @@
 function setup() {
   // 色相, 彩度, 明度, 透明度 で指定できる
   colorMode(HSB, 100);
+  // angle を整数で渡せる
+  angleMode(DEGREES);
 
-  frameRate(30);
+  frameRate(100);
   textSize(30);
 
   createCanvas(800, 400);
@@ -11,7 +13,7 @@ function setup() {
 
 function draw() {
   noStroke();
-  fill(50, 60, 90, 100);
+  fill(50, 60, 90, 10);
   var lineWeight = 10;
   var radius = 150;
   var angle = frameCount;
