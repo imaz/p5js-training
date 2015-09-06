@@ -9,6 +9,17 @@ function setup() {
 }
 
 function draw() {
+  noStroke();
+  fill(50, 60, 90, 5);
+  var lineWeight = 10;
+  var radius = 150;
+  for(var i = 0; i < 360; i++){
+    ellipse(
+      cos(i) * radius + width/2,
+      sin(i) * radius + height/2,
+      lineWeight, lineWeight
+    );
+  }
 }
 
 /***
