@@ -40,10 +40,13 @@ function Ball() {
     speed = 1;
   }
 
+  var x = 0;
   var y = 0;
 
   var getX = function() {
-    return width/2;
+    x = frameCount % width;
+
+    return x;
   };
   var getY = function() {
     if (y > height) {
