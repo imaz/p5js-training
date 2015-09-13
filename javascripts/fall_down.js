@@ -29,13 +29,32 @@ function Ball() {
     ellipse(getX(), getY(), ballSize, ballSize);
   };
 
+  var ACCELERATION = 0.25;
+  var speed = 1;
   var ballSize = 30;
+
+  var speedUp = function() {
+    speed += ACCELERATION;
+  };
+  var resetSpeed = function(){
+    speed = 1;
+  }
+
+  var y = 0;
 
   var getX = function() {
     return width/2;
   };
   var getY = function() {
-    return frameCount % height;
+    if (y > height) {
+      y = 0;
+      resetSpeed();
+    }
+
+    y += speed;
+    speedUp();
+
+    return y;
   };
 };
 var ball = new Ball();
